@@ -2,25 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title>OpenLayers - Welcome</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-core.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/autoloader/prism-autoloader.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/toolbar/prism-toolbar.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400italic,700" crossorigin="anonymous">
+    <title>OpenLayers v10.5.0 API - Index</title>
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/solid.css" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/brands.css" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles/prettify-tomorrow.css">
+    <link rel="stylesheet" type="text/css" href="styles/jaguar.css">
+    <link rel="stylesheet" type="text/css" href="styles/carbon.css">
     <link rel="stylesheet" type="text/css" href="/theme/ol.css">
     <link rel="stylesheet" type="text/css" href="/theme/site.css">
-    <link rel="icon" type="image/svg+xml" href="/theme/img/logo-light.svg" media="(prefers-color-scheme: light)" />
-    <link rel="icon" type="image/svg+xml" href="/theme/img/logo-dark.svg" media="(prefers-color-scheme: dark)" />
-    <link rel="stylesheet" type="text/css" href="./theme/index.css">
   </head>
   <body>
-    <header class="navbar navbar-expand-md navbar-dark mb-3 px-3 py-0 fixed-top" role="navigation">
+    <header class="navbar navbar-expand-sm navbar-dark mb-3 px-3 py-0 fixed-top" role="navigation">
       <a class="navbar-brand" href="/"><img src="/theme/img/logo-dark.svg" width="70" height="70" alt="">&nbsp;OpenLayers</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#olmenu" aria-controls="olmenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -28,10 +26,10 @@
 
       <!-- menu items that get hidden below 768px width -->
       <nav class="collapse navbar-collapse" id="olmenu">
-        <ul class="nav navbar-nav ms-auto">
+        <ul class="navbar-nav ms-auto">
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="docdropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Docs</a>
-            <div class="dropdown-menu dropdown-menu-end mb-3" aria-labelledby="docdropdown">
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="docdropdown">
               <a class="dropdown-item" href="/doc/">Docs</a>
               <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="/doc/quickstart.html"><i class="fa fa-check fa-fw me-2 fa-lg"></i>Quick Start</a>
@@ -42,25 +40,11 @@
                 <a class="dropdown-item" href="https://stackoverflow.com/questions/tagged/openlayers"><i class="fab fa-stack-overflow fa-fw me-2"></i>Ask a Question</a>
             </div>
           </li>
-          <li class="nav-item"><a class="nav-link" href="/en/latest/examples/">Examples</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="apidropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="fa fa-sitemap me-1"></i>API
-            </a>
-            <div class="dropdown-menu dropdown-menu-end mb-3" aria-labelledby="apidropdown">
-              <a class="dropdown-item" href="/en/latest/apidoc/"><i class="fa fa-sitemap fa-fw me-2 fa-lg"></i>v10.5.0 (latest)</a>
-              <a class="dropdown-item" href="/en/v9.2.4/apidoc/"><i class="fa fa-sitemap a-fw me-2 fa-lg"></i>v9.2.4</a>
-              <a class="dropdown-item" href="/en/v8.2.0/apidoc/"><i class="fa fa-sitemap a-fw me-2 fa-lg"></i>v8.2.0</a>
-              <a class="dropdown-item" href="/en/v7.5.2/apidoc/"><i class="fa fa-sitemap a-fw me-2 fa-lg"></i>v7.5.2</a>
-              <a class="dropdown-item" href="/en/v6.15.1/apidoc/"><i class="fa fa-sitemap a-fw me-2 fa-lg"></i>v6.15.1</a>
-              <a class="dropdown-item" href="/en/v5.3.0/apidoc/"><i class="fa fa-sitemap fa-fw me-2 fa-lg"></i>v5.3.0</a>
-              <a class="dropdown-item" href="/en/v4.6.5/apidoc/"><i class="fa fa-sitemap fa-fw me-2 fa-lg"></i>v4.6.5</a>
-              <a class="dropdown-item" href="/en/v3.20.1/apidoc/"><i class="fa fa-sitemap fa-fw me-2 fa-lg"></i>v3.20.1</a>
-            </div>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="../examples/">Examples</a></li>
+          <li class="nav-item active"><a class="nav-link" href="../apidoc/"><i class="fa fa-sitemap me-1"></i>API</a></li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="codedropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Code</a>
-            <div class="dropdown-menu dropdown-menu-end mb-3" aria-labelledby="codedropdown">
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="codedropdown">
               <a class="dropdown-item" href="https://github.com/openlayers/openlayers"><i class="fab fa-github fa-fw me-2 fa-lg"></i>Repository</a>
               <a class="dropdown-item" href="/download/"><i class="fa fa-download fa-fw me-2 fa-lg"></i>Download</a>
             </div>
@@ -69,145 +53,155 @@
       </nav>
     </header>
 
-    <div id='map'></div>
-<div class='container'>
-  <blockquote id='tagline' class='text-end plain'>
-    <p>A high-performance, feature-packed library for all your mapping needs.</p>
-  </blockquote>
-  <div class='row' id='news'>
-    <div class='col-sm-12'>
-      <h1 class='topic'><i class='fa fa-rss'></i> Latest</h1>
-      <p><strong>OpenLayers <a href="/download/">v10.5.0</a> is here!</strong> Check out the <a href="/doc/">docs</a> and the <a href="/en/latest/examples/">examples</a> to get started. The full distribution can be downloaded from the <a href="/download/">release page</a>.</p>
+    <div class="container-fluid">
+      <div id="wrap" class="row">
+        <div class="navigation col-md-4 col-lg-3">
+          <div class="search-wrapper">
+            <div class="search">
+              <input id="search" type="text" autocomplete="off" class="form-control input-sm" placeholder="Search Documentation">
+            </div>
+          </div>
+          <div class="navigation-list-wrapper">
+            <ul class="navigation-list search-empty">
+              <li class="loading">Loading …
+            </ul>
+          </div>
+        </div>
+
+        <div class="main col-md-8 col-lg-9">
+          <h1 class="page-title" data-filename="index.html">Index</h1>
+          <div id="latest-check" class="alert alert-warning alert-dismissible" role="alert" style="display:none">
+            <button id="latest-dismiss" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            This documentation is for OpenLayers v<span id="package-version">10.5.0</span>. The <a id="latest-link" href="#" class="alert-link">latest</a> is v<span id="latest-version"></span>.
+          </div>
+          
+
+
+    
+
+
+
+
+    <section>
+        <article class="readme"><div class="row mb-3">
+  <div class="col-xl-4 col-lg-6 py-3">
+    <div class="card h-100 bg-light">
+      <div class="card-body">
+        <h4 class="card-title">Map</h4>
+        <p>A <a href="module-ol_Map-Map.html">map</a> is made of <a href="module-ol_layer_Base-BaseLayer.html">layers</a>, a <a href="module-ol_View-View.html">view</a> to visualize them, <a href="module-ol_interaction_Interaction-Interaction.html">interactions</a> to modify map content and <a href="module-ol_control_Control-Control.html">controls</a> with UI components.</p>
+        <a href="module-ol_Map-Map.html">Overview</a><br>
+        <a href="module-ol_Map-Map.html#Map">Creation</a><br>
+        <a href="module-ol_MapBrowserEvent-MapBrowserEvent.html">Events</a>
+      </div>
     </div>
   </div>
-  <div class='row'>
-    <h1 class='topic col-sm-12'>Overview</h1>
-  </div>
-  <div class='row'>
-    <div class='col-sm-12'>
-      <p>OpenLayers makes it easy to put a dynamic map in any web page. It can display map tiles, vector data and markers loaded from any source. OpenLayers has been developed to further the use of geographic information of all kinds. It is completely free, Open Source JavaScript, released under the 2-clause BSD License (also known as the FreeBSD).</p>
+  <div class="col-xl-4 col-lg-6 py-3">
+    <div class="card h-100 bg-light">
+      <div class="card-body">
+        <h4 class="card-title">View</h4>
+        <p>The view manages the visual parameters of the map view, like resolution or rotation.</p>
+        <a href="module-ol_View-View.html">View</a> with center, projection, resolution and rotation
+      </div>
     </div>
   </div>
-  <div class='row'>
-    <h1 class='topic col-sm-12'>Features</h1>
-  </div>
-  <div class='row'>
-    <div class='col-sm-6'>
-      <h3>Tiled Layers</h3>
-      <img src='/theme/img/tiled-layers.png' width="102" height="84" class='thumb' alt="tiled layers">
-      <p>Pull tiles from OSM, Bing, MapBox, Stadia Maps, and any other XYZ source you can find.  OGC mapping services and untiled layers also supported.</p>
-    </div>
-    <div class='col-sm-6'>
-      <h3>Vector Layers</h3>
-      <img src='/theme/img/vector-layers.png' width="102" height="84" class='thumb' alt="vector layers">
-      <p>Render vector data from GeoJSON, TopoJSON, KML, GML, Mapbox vector tiles, and other formats.</p>
-    </div>
-  </div>
-  <div class='row'>
-    <div class='col-sm-6'>
-      <h3>Cutting Edge, Fast &amp; Mobile Ready</h3>
-      <img src='/theme/img/timeline.png' width="102" height="84" class='thumb' alt="mobile ready">
-      <p>Leverages Canvas 2D, WebGL, and all the latest greatness from HTML5.  Mobile support out of the box.  Build lightweight custom profiles with just the components you need.</p>
-    </div>
-    <div class='col-sm-6'>
-      <h3>Easy to Customize and Extend</h3>
-      <img src='/theme/img/popup.png' width="102" height="84" class='thumb' alt="customizable">
-      <p>Style your map controls with straight-forward CSS. Hook into different levels of the API or use <a href="/3rd-party/">3rd party libraries</a> to customize and extend functionality.</p>
+  <div class="col-xl-4 col-lg-6 py-3">
+    <div class="card h-100 bg-light">
+      <div class="card-body">
+        <h4 class="card-title">Layers</h4>
+        <p>Layers are lightweight containers that get their data from <a href="module-ol_source_Source-Source.html">sources</a>.</p>
+        <a href="module-ol_layer_Tile-TileLayer.html">ol/layer/Tile</a><br>
+        <a href="module-ol_layer_Image-ImageLayer.html">ol/layer/Image</a><br>
+        <a href="module-ol_layer_Vector-VectorLayer.html">ol/layer/Vector</a><br>
+        <a href="module-ol_layer_VectorImage-VectorImageLayer.html">ol/layer/VectorImage</a><br>
+        <a href="module-ol_layer_VectorTile-VectorTileLayer.html">ol/layer/VectorTile</a><br>
+        <a href="module-ol_layer_WebGLTile-WebGLTileLayer.html">ol/layer/WebGLTile</a>
+      </div>
     </div>
   </div>
-  <div class='row'>
-    <h1 class='topic col-sm-12'>Learn More</h1>
-  </div>
-  <div class='row'>
-    <div class='col-sm-6'>
-      <a href='/doc/quickstart.html'>
-        <h3><i class='fa fa-check'></i> Quick Start</h3>
-      </a>
-      <p>Seen enough already? Go here to get started.</p>
-    </div>
-    <div class='col-sm-6'>
-      <a href='/download/'>
-        <h3><i class='fa fa-download'></i> Get the Code</h3>
-      </a>
-      <p>Get the latest release or dig through the archives.</p>
+  <div class="col-xl-4 col-lg-6 py-3">
+    <div class="card h-100 bg-light">
+      <div class="card-body">
+        <h4 class="card-title">Controls</h4>
+        <a href="module-ol_control_defaults#.defaults">Map default controls</a><br>
+        <a href="module-ol_control_Control-Control.html">All controls</a>
+      </div>
     </div>
   </div>
-  <div class='row'>
-    <div class='col-sm-6'>
-      <a href='/doc/tutorials/'>
-        <h3><i class='fa fa-book'></i> Tutorials</h3>
-      </a>
-      <p>Spend time learning the basics and graduate up to advanced mapping techniques.</p>
-    </div>
-    <div class='col-sm-6'>
-      <a href='/workshop/'>
-        <h3><i class='fa fa-graduation-cap'></i> Workshop</h3>
-      </a>
-      <p>Want to learn OpenLayers hands-on? Get started with the workshop.</p>
-    </div>
-  </div>
-  <div class='row'>
-    <div class='col-sm-6'>
-      <a href='/en/latest/apidoc/'>
-        <h3><i class='fa fa-sitemap'></i> API Docs</h3>
-      </a>
-      <p>Browse through the API docs for details on code usage.</p>
+  <div class="col-xl-4 col-lg-6 py-3">
+    <div class="card h-100 bg-light">
+      <div class="card-body">
+        <h4 class="card-title">Interactions</h4>
+        <a href="module-ol_interaction_defaults#.defaults">Map default interactions</a><br>
+        Interactions for <a href="module-ol_Feature-Feature.html">vector features</a>
+        <ul><li><a href="module-ol_interaction_Select-Select.html">ol/interaction/Select</a></li>
+          <li><a href="module-ol_interaction_Draw-Draw.html">ol/interaction/Draw</a></li>
+          <li><a href="module-ol_interaction_Modify-Modify.html">ol/interaction/Modify</a></li>
+        </ul>
+        <a href="module-ol_interaction_Interaction-Interaction.html">All interactions</a>
+      </div>
     </div>
   </div>
-  <div class='row'>
-    <h1 class='topic col-sm-12'>Older versions</h1>
-    <div class='col-sm-12'>
-      <p>In case you are not ready (yet) for the latest version of OpenLayers, we provide links to selected resources of older major versions of the software.</p>
-      <ul>
-        <li>Latest v9: <a href="https://github.com/openlayers/openlayers/releases/tag/v9.2.4">v9.2.4</a> released 2024-05-27 &mdash; <a href="/en/v9.2.4/apidoc/">API</a> &amp;  <a href="/en/v9.2.4/examples/">examples</a></li>
-        <li>Latest v8: <a href="https://github.com/openlayers/openlayers/releases/tag/v8.2.0">v8.2.0</a> released 2023-11-14 &mdash; <a href="/en/v8.2.0/apidoc/">API</a> &amp;  <a href="/en/v8.2.0/examples/">examples</a></li>
-        <li>Latest v7: <a href="https://github.com/openlayers/openlayers/releases/tag/v7.5.2">v7.5.2</a> released 2023-08-31 &mdash; <a href="/en/v7.5.2/apidoc/">API</a> &amp;  <a href="/en/v7.5.2/examples/">examples</a></li>
-        <li>Latest v6: <a href="https://github.com/openlayers/openlayers/releases/tag/v6.15.1">v6.15.1</a> released 2022-07-18 &mdash; <a href="/en/v6.15.1/doc/">docs</a>, <a href="/en/v6.15.1/apidoc/">API</a> &amp;  <a href="/en/v6.15.1/examples/">examples</a></li>
-        <li>Latest v5: <a href="https://github.com/openlayers/openlayers/releases/tag/v5.3.0">v5.3.0</a> released 2018-11-06 &mdash; <a href="/en/v5.3.0/doc/">docs</a>, <a href="/en/v5.3.0/apidoc/">API</a> &amp;  <a href="/en/v5.3.0/examples/">examples</a></li>
-        <li>Latest v4: <a href="https://github.com/openlayers/openlayers/releases/tag/v4.6.5">v4.6.5</a> released 2018-03-20 &mdash; <a href="/en/v4.6.5/doc/">docs</a>, <a href="/en/v4.6.5/apidoc/">API</a> &amp;  <a href="/en/v4.6.5/examples/">examples</a></li>
-        <li>Latest v3: <a href="https://github.com/openlayers/openlayers/releases/tag/v3.20.1">v3.20.1</a>, released 2016-12-21 &mdash; <a href="/en/v3.20.1/doc/">docs</a>, <a href="/en/v3.20.1/apidoc/">API</a> &amp;  <a href="/en/v3.20.1/examples/">examples</a></li>
-        <li>Latest v2: v2.13.1, released 2013-07-09 &mdash; you'll find everything you need on the <a href="./two/">2.x page</a></li>
-      </ul>
-      <p>Please consider upgrading to benefit from the latest features and bug fixes. Get better performance and usability for free by using recent versions of OpenLayers.</p>
+  <div class="col-xl-4 col-lg-6 py-3">
+    <div class="card h-100 bg-light">
+      <div class="card-body">
+        <h4 class="card-title">Sources and formats</h4>
+        <a href="module-ol_source_Tile-TileSource.html">Tile sources</a> for <a href="module-ol_layer_Tile-TileLayer.html">ol/layer/Tile</a> or <a href="module-ol_layer_WebGLTile-WebGLTileLayer.html">ol/layer/WebGLTile</a>
+        <br><a href="module-ol_source_Image-ImageSource.html">Image sources</a> for <a href="module-ol_layer_Image-ImageLayer.html">ol/layer/Image</a>
+        <br><a href="module-ol_source_Vector-VectorSource.html">Vector sources</a> for <a href="module-ol_layer_Vector-VectorLayer.html">ol/layer/Vector</a>
+        <br><a href="module-ol_source_VectorTile-VectorTile.html">Vector tile sources</a> for <a href="module-ol_layer_VectorTile-VectorTileLayer.html">ol/layer/VectorTile</a>
+        <br><a href="module-ol_format_Feature-FeatureFormat.html">Formats</a> for reading/writing vector data
+        <br><a href="module-ol_format_WMSCapabilities-WMSCapabilities.html">ol/format/WMSCapabilities</a>
+      </div>
     </div>
   </div>
-  <div class='row'>
-    <h1 class='topic col-sm-12'>Get Involved</h1>
-  </div>
-  <div class='row'>
-    <div class='col-sm-4'>
-      <a href='https://github.com/openlayers/openlayers'>
-        <h3><i class="fa fa-code-fork"></i> Fork the repo</h3>
-      </a>
-    </div>
-    <div class='col-sm-4'>
-      <a href='https://github.com/openlayers/openlayers/issues'>
-        <h3><i class="fa fa-bug"></i> Open a ticket</h3>
-      </a>
-    </div>
-    <div class='col-sm-4'>
-      <a href='http://stackoverflow.com/questions/tagged/openlayers'>
-        <h3><i class="fa fa-user"></i> Ask a question</h3>
-      </a>
+  <div class="col-xl-4 col-lg-6 py-3">
+    <div class="card h-100 bg-light">
+      <div class="card-body">
+        <h4 class="card-title">Projections</h4>
+          <p>All coordinates and extents need to be provided in view projection (default: EPSG:3857). To transform coordinates from and to geographic, use <a href="module-ol_proj.html#.fromLonLat">fromLonLat()</a> and <a href="module-ol_proj.html#.toLonLat">toLonLat()</a>. For extents and other projections, use <a href="module-ol_proj.html#.transformExtent">transformExtent()</a> and <a href="module-ol_proj.html#.transform">transform()</a>.</p>
+          <p>Find these functions and more in the <a href="module-ol_proj.html">ol/proj</a> module.</p>
+      </div>
     </div>
   </div>
-  <div class="row">
-    <h1 class='topic col-sm-12'>Sustaining Sponsors</h1>
+  <div class="col-xl-4 col-lg-6 py-3">
+    <div class="card h-100 bg-light">
+      <div class="card-body">
+        <h4 class="card-title">Observable objects</h4>
+        <p>Changes to all <a href="module-ol_Object-BaseObject.html">Object</a>s can be observed by calling the <a href="module-ol_Object-BaseObject.html#on">object.on('propertychange')</a> method.  Listeners receive an <a href="module-ol_Object.ObjectEvent.html">ObjectEvent</a> with information on the changed property and old value.</p>
+      </div>
+    </div>
   </div>
-  <div class="row">
-    <div class="col-sm-3 text-center"><a target="_blank" href="https://pozi.com/"><img src="/theme/img/sponsor-logos/pozi.png"></a></div>
-    <div class="col-sm-3 text-center"><a target="_blank" href="https://www.yeymaps.io/"><img src="/theme/img/sponsor-logos/yeymaps.png"></a></div>
+  <div class="col-xl-4 col-lg-6 py-3">
+    <div class="card h-100 bg-light">
+      <div class="card-body">
+        <h4 class="card-title">Other components</h4>
+        <a href="module-ol_Geolocation.html">ol/Geolocation</a><br>
+        <a href="module-ol_Overlay-Overlay.html">ol/Overlay</a><br>
+      </div>
+    </div>
   </div>
 </div>
-<script src="./main.js"></script>
+<h3 class="mb-3">API change policy</h3>
+The OpenLayers API consists of
+<ul>
+  <li>names and signatures of constructors</li>
+  <li>names and signatures of instance methods and properties</li>
+  <li>names and signatures of functions</li>
+  <li>names of constants</li>
+</ul>
+<p>Within a major release series, the API will not be changed.  Any changes to the API will be accompanied by a new major release.</p>
+<p class="text-danger">Note: The API change policy does not cover CSS class names that are used to style the OpenLayers UI. It also does not cover any typedefs and enums.</p></article>
+    </section>
 
-    <footer>
-      Code licensed under the <a href='http://www.tldrlegal.com/license/bsd-2-clause-license-(freebsd)'>2-Clause BSD</a>.
-      All documentation <a href='http://creativecommons.org/licenses/by/3.0/'>CC BY 3.0</a>.
-      Thanks to our <a href='https://opencollective.com/openlayers'>sponsors</a>.
-      <br>
-      <a href="https://www.netlify.com">This site is powered by Netlify.</a>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+        </div>
+      </div>
+    </div>
+    <script>prettyPrint();</script>
+    <script src="scripts/linenumber.js"></script>
+    <script src="scripts/main.js"></script>
   </body>
 </html>
